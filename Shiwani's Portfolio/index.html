@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    <title>Shiwani's Portfolio</title>
+
+    <!-- Main CSS -->
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+        body {
+            margin: 0;
+            background: #000;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        ul > li {
+            list-style: none;
+            font-weight: 700;
+        }
+        button {
+            border: 2px solid white;
+            padding: .7rem 3rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.3rem;
+            background: #1c1427;
+            transition: .5s;
+        }
+        button:hover {
+            background: #fff;
+            color: #000;
+            border: 2px solid black;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+        .App {
+            background-image: url('effect-fqyVfewj.png');
+            animation: static 3s steps(5, end) infinite;
+            z-index: 999;
+            background-size: 200px;
+        }
+        footer h3 {
+            text-align: center;
+            background-color: gray;
+            color: #fff;
+            margin: 0;
+            padding: 2% 0;
+            letter-spacing: .1rem;
+        }
+        @keyframes static {
+            0% { background-position: 0% 0%; }
+            20% { background-position: 25% 15%; }
+            40% { background-position: 50% 69%; }
+            60% { background-position: 33% 25%; }
+            80% { background-position: 72% 4%; }
+            to { background-position: 80% 91%; }
+        }
+        @media screen and (min-resolution: 100dpi) {
+            button { font-size: 1rem; }
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            background-color: transparent;
+            width: 100%;
+            z-index: 99;
+            padding: 0 0 0 10%;
+        }
+        .menu {
+            display: flex;
+            margin-right: 20%;
+        }
+        .menu > li {
+            padding: 0 .75rem;
+            font-size: 1.2rem;
+            font-weight: 60;
+        }
+        .tophead > h1 {
+            display: flex;
+        }
+        .name-logo {
+            font-family: Courier New, monospace;
+            font-size: 25px;
+        }
+        .blink {
+            height: 1.2rem;
+            width: 15px;
+            animation: blink .5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-bottom: 3px solid white;
+            display: block;
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+        .menu-btn {
+            display: none;
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #1c1427;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+        }
+        .hero {
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+            letter-spacing: .1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 7%;
+            padding-left: 10%;
+        }
+        .hero-content {
+            font-family: cursive;
+            white-space: nowrap;
+            animation: 
+                typing 7s steps(18),
+                cursor .4s step-end infinite alternate;
+        }
+        @keyframes cursor {
+            50% { border-color: transparent; }
+        }
+        @keyframes typing {
+            from { width: 0; }
+        }
+        .hero h2 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 4rem;
+        }
+        .hero p {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        .hero-buttons button {
+            background: #1c1427;
+            color: #fff;
+            align-items: center;
+        }
+        .hero-image img {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); /* Adjust height of the float effect */ }
+            100% { transform: translateY(0); }
+        }
+        @media only screen and (max-width: 768px) {
+            nav {
+                padding: 5% 0 0 5%;
+                flex-direction: column;
+                align-items: flex-start;
+                position: static;
+                background: transparent;
+                width: auto;
+            }
+            .menu {
+                margin: 40% 15%!important;
+                padding: 0;
+                transition: transform .5s ease-in-out;
+                display: none;
+            }
+            .menu > li {
+                font-size: 1.5rem;
+                padding: 0;
+            }
+            .tophead > h1 {
+                margin: 0;
+                display: flex;
+            }
+            .name-logo {
+                font-size: 1.2em;
+            }
+            .blink {
+                height: 1.8rem;
+            }
+            .tophead {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .menu-btn {
+                display: block;
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAj0lEQVR4nO3YMQ7CQAxE0ZVyGoJydghV4FKI0KX5kenSgNgCxct/J5iRLBdTiiRJkiRJ2gCOwAV4sH+RcQT6UgMYgCf5ROahpvCNvK7flu2Ahbwie2fhhk96eluusac1Vz2tEC8eOAN39i8ynoDDK7wkSZKk38FNKwU3rY/ctFof8YKbVh5uWpIkSZIk/bsVWs7Z6j8gvfQAAAAASUVORK5CYII=);
+                width: 25px;
+                height: 25px;
+                background-size: cover;
+                margin-right: 5%;
+            }
+            .opened-btn {
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABQElEQVR4nO2ZQWrDMBBFfZQucpIESvZRsrCbs3fRM4RAEnglpKYO2CCPNaOR0d8ZjP5/GslI46apqqqqWpWADRAy+odnhqWDfADfwAM4J0sX738C7sCPGGYA0csUhn+IXjIY4PgXfqjnc6eS/N27m/A+ppoV9cqg5WkJg7aXBYzZhKFoZL6EUTDMsQ+TG2eDSBkgO0SKIG4glgRyByEJ5hZiTkD3EDFBi4GIOOxlOXwu0sTsl1GJGTDlQKwGhDUsLaAtfrOzhs8vr/v9WNCvwTu+YYiAcA/DDAi3MAgg3MHwamOKIDzdDsNSCA/39TBh3JXUQQmpIXL0tIIWhGWXMQA3TQiLvu9hAqJNll4bhvHldBe39tPcNFvJYJ/A1aoSEZW5ADvpYD2MKcQIjBxiMNg+88/QFtjm8q+qqqpqVPQL08n6GKXmFcYAAAAASUVORK5CYII=);
+                width: 25px;
+                height: 25px;
+                margin-right: 10%;
+            }
+            .open {
+                display: flex;
+                flex-direction: column;
+                gap: 4rem;
+            }
+            .nav-open {
+                transition: all .3s ease-in-out;
+                background: #000c;
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+                height: 110vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 99;
+            }
+        }
+        .about {
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 5% 10%;
+            text-align: left;
+        }
+        .about p {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .about p.red {
+            color: red;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .role {
+    position: absolute;
+    opacity: 0;
+    animation: fadeInOut 9s infinite;
+    color: yellow;
+    font-size: 60px;
+}
+
+.role:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.role:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.role:nth-child(3) {
+    animation-delay: 6s;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="App">
+        <nav>
+            <div class="tophead">
+                <h1 class="name-logo">Coder <span class="blink"></span></h1>
+                <button class="menu-btn"></button>
+            </div>
+            <!-- <ul class="menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#interests">Interests</a></li>
+            </ul> -->
+        </nav>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h2>Hello, I am <br>Shiwani R</h2>
+            </div>
+            <div class="hero-image">
+                <img src="pic.png" alt="Shiwani's Image">
+            </div>
+        </section>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <p class="red">Eat - Sleep - Code - Repeat</p>
+            <div class="roles">
+                <div class="role"><b>Full Stack Developer_</b></div>
+                <div class="role"><b>AI/ML_</b></div>
+                <div class="role"><b>Problem Solver_</b></div>
+            </div>
+            <p>
+                <br><br><br><br>
+                3rd year Computer Science and Engineering student
+                    currently pursing bachelors at Sri Krishna College of
+                    Engineering and Technology,Coimbatore.<br>
+                    Enthusiastic about full stack development. Other domains
+                    of interest include Machine Learning,design thinking,
+                    problem solving.<br>
+                    Accolades and experience in various hackathons and
+                    coding events by Amazon,Facebook etc..,<br>
+                    Working on Platforms like Leetcode, HackerRank, Hacker
+                    Earth, Coding Ninjas.<br>
+                    An optimistic individual about tech industry who is ready
+                    for challenges with a positive mindset.<br>
+                    A cross-cultural person who loves interacting with people
+                    from different cultural and geographical backgrounds.
+                    Served as Leader/mentor during schooling.<br>
+                    My hobbies and passion include playing piano(pursuing
+                    grade 8) ,Baking cakes and pastries(running instagram
+                    account page for selling -Sahasram bakes), painting ,
+                    Playing Badminton, Making Resin Products, Teaching,
+                    Organizing stuffs.<br>
+            </p>
+            <br><br>
+            <div class="hero-buttons">
+                <button><a href="mailto:shiwanirameshbabu@gmail.com">Mail</a></button>
+                <button><a href="/Shiwani_R Resume.pdf" download>Get My Resume</a></button>
+                <button><a href="mailto:shiwanirameshbabu@gmail.com?subject=Hire Me">Hire Me</a></button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <h3>&copy;  Shiwani's Portfolio</h3>
+    </footer>
+    <!-- JavaScript -->
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const menu = document.querySelector('.menu');
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+            menuBtn.classList.toggle('opened-btn');
+        });
+
+        document.addEventListener('scroll', () => {
+            const scrollToTopBtn = document.querySelector('.scroll-to-top');
+            if (window.scrollY > 300) { // Show button after scrolling 300px
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        document.querySelector('.scroll-to-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
+    <script type="text/javascript">
+        const options = {
+            cursorOuter: "circle-basic",
+            hoverEffect: "circle-move",
+            hoverItemMove: false,
+            defaultCursor: false,
+            outerWidth: 50,
+            outerHeight: 50
+        };
+        magicMouse(options);
+    </script>
+</body>
+</html>
