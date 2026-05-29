@@ -125,7 +125,7 @@ nav {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -146,10 +146,7 @@ nav {
 }
 .hero-content {
     font-family: cursive;
-    white-space: nowrap;
-    animation: 
-        typing 7s steps(18),
-        cursor .4s step-end infinite alternate;
+    max-width: 600px;
 }
 @keyframes cursor {
     50% { border-color: transparent; }
@@ -338,7 +335,7 @@ nav {
     <div class="App">
         <nav>
             <div class="tophead">
-                <h1 class="name-logo">Coder <span class="blink"></span></h1>
+                <h1 class="name-logo">Ratiocinator <span class="blink"></span></h1>
                 <button class="menu-btn"></button>
             </div>
             <!-- <ul class="menu">
@@ -350,6 +347,8 @@ nav {
         <section id="hero" class="hero">
             <div class="hero-content">
                 <h2>Hello, I am <br>Shiwani R</h2>
+                <p>Data &amp; Analytics Engineer | Product-Tech Hybrid | AI Enthusiast</p>
+                <p>I solve problems at the intersection of technology, data and business to create practical, measurable impact.</p>
             </div>
             <div class="hero-image">
                 <img src="pic.png" alt="Shiwani's Image">
@@ -357,38 +356,38 @@ nav {
         </section>
         <!-- About Section -->
         <section id="about" class="about">
-            <p class="red">Eat - Sleep - Code - Repeat</p>
+            <p class="red">Data · Product · AI</p>
             <div class="roles">
-                <div class="role"><b>Data Engineer_</b></div>
-                <div class="role"><b>Full Stack Developer/Problem Solver_</b></div>
-                <div class="role"><b>AI/ML_</b></div>
+                <div class="role"><b>Data &amp; Analytics Engineer_</b></div>
+                <div class="role"><b>Product-Tech Hybrid / Full Stack Developer_</b></div>
+                <div class="role"><b>AI Enthusiast &amp; Problem Solver_</b></div>
             </div>
             <p>
-                <br><br><br><br>
-                A Computer Science and Engineering student at Sri Krishna College of Engineering and Technology, 
-                    Coimbatore at present working as a data engineering intern at booking holdings india coe.<br>
-                    Enthusiastic about full stack development. Other domains
-                    of interest include Machine Learning,design thinking,data,
-                    problem solving.<br>
-                    Accolades and experience in various hackathons and
-                    coding events by Amazon,Facebook etc..,<br>
-                    Working on Platforms like Leetcode, HackerRank, Hacker
-                    Earth, Coding Ninjas.<br>
-                    An optimistic individual about tech industry who is ready
-                    for challenges with a positive mindset.<br>
-                    A cross-cultural person who loves interacting with people
-                    from different cultural and geographical backgrounds.
-                    Served as Leader/mentor during schooling.<br>
-                    My hobbies and passion include playing piano(pursuing
-                    grade 8) ,Baking cakes and pastries(running instagram
-                    account page for selling -Sahasram bakes), painting ,
-                    Playing Badminton, Making Resin Products, Teaching,
-                    Organizing stuffs.<br>
+                <br><br><br>
+                I am a Data & Analytics Engineer with hands-on experience as a
+                Data Engineering Intern at <b>Booking Holdings India COE</b>, where I
+                built attribute-level data profiling systems for C360 datasets using
+                <b>Snowflake</b>, <b>Snowpark</b> and <b>Python</b> to ensure data quality and
+                completeness, and visualized metrics in <b>Grafana</b> for faster
+                monitoring and decision-making.<br><br>
+                I enjoy working on the full stack: designing resilient data pipelines,
+                analytics dashboards and user-centric web applications using
+                <b>React JS</b>, <b>MySQL</b> and <b>Spring Boot</b>. My projects include
+                <b>C360 Data Profiling</b>, <b>Traffic Flow Optimization &amp; Congestion Management</b>,
+                <b>Online Bill Payment Website</b>, <b>Law Advisor / Smart Law Suggestion System</b>,
+                <b>Logistics Management System</b> and <b>JotDown – Note Taking Website</b>.<br><br>
+                I actively participate in hackathons and tech events such as
+                <b>Ideafest (Winners)</b>, <b>SIH 2023 (Finalist)</b>, PSG iTech Hackfest,
+                Rise Up With Service Now, Amazon WoW and more, where I love turning ideas into
+                working prototypes around data, AI and product-tech hybrids.<br><br>
+                Outside tech, I enjoy playing piano, baking and running my
+                <b>Sahasram</b> page, painting, playing badminton, creating resin
+                products, teaching and organizing events.<br>
             </p>
             <br><br>
             <div class="hero-buttons">
                 <button><a href="mailto:shiwanirameshbabu@gmail.com">Mail</a></button>
-                <button><a href="/Shiwani_R Resume.pdf" download target="_blank">Get My Resume</a></button>
+                <button><a href="Shiwani_Resume.pdf" download target="_blank">Get My Resume</a></button>
                 <button><a href="mailto:shiwanirameshbabu@gmail.com?subject=Hire Me">Hire Me</a></button>
             </div>
         </section>
@@ -396,6 +395,7 @@ nav {
     <footer>
         <h3>&copy;  Shiwani's Portfolio</h3>
     </footer>
+    <button class="scroll-to-top" aria-label="Scroll to top">↑</button>
     <!-- JavaScript -->
     <script>
         const menuBtn = document.querySelector('.menu-btn');
